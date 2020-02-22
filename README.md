@@ -1,6 +1,6 @@
 # math-folding
 
-[![Math Folding](https://img.shields.io/badge/JB%20Repository-Math%20Folding-brightgreen.svg?style=flat)](https://plugins.jetbrains.com/plugin/9293-math-folding "JetBrains Repo: Math Folding Plugin")
+[![Math Folding](https://img.shields.io/badge/JB%20Repository-Math%20Folding-brightgreen.svg)](https://plugins.jetbrains.com/plugin/9293-math-folding "JetBrains Repo: Math Folding Plugin")
 
 Intellij IDEA plugin to fold Math.abs, Math.pow, Math.sqrt, Math.cbrt into more readable, mathematical symbols.
 
