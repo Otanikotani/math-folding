@@ -1,0 +1,67 @@
+plugins {
+    id 'jacoco'
+    id 'java-library'
+    id 'groovy'
+    id 'org.jetbrains.intellij' version '0.4.16'
+
+    id 'com.adarshr.test-logger' version '1.7.0'
+}
+
+group 'org.github.otanikotani'
+version '0.0.2'
+
+sourceCompatibility = JavaVersion.VERSION_1_8
+
+repositories {
+    jcenter()
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.codehaus.groovy:groovy-all:2.4.17'
+    testImplementation(group: 'org.spockframework', name: 'spock-core', version: '1.3-groovy-2.4') {
+        //This is to avoid issues with intellij plugin as it has a specific groovy jar in it
+        exclude group: 'org.codehaus.groovy', module: 'groovy-all'
+    }
+}
+
+// See https://github.com/JetBrains/gradle-intellij-plugin/
+intellij {
+    version '2019.3.1'
+    plugins = ['java']
+}
+
+patchPluginXml {
+    changeNotes """                                              
+      {{CHANGELOG-PLACEHOLDER}}
+      """
+}
+
+
+testlogger {
+    theme 'mocha'
+    showSkipped true
+}
+
+test {
+    ignoreFailures = true
+
+    finalizedBy jacocoTestReport
+}
+
+jacoco {
+    toolVersion = "0.8.5"
+}
+
+jacocoTestReport {
+    reports {
+        xml.enabled true
+        xml.destination new File("${buildDir}/reports/jacoco/report.xml")
+        csv.enabled false
+        html.destination file("${buildDir}/jacocoHtml")
+    }
+}
+
+publishPlugin {
+    token = System.getenv("ORG_GRADLE_PROJECT_intellijPublishToken")
+}

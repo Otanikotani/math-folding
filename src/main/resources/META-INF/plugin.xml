@@ -1,0 +1,29 @@
+<idea-plugin>
+    <id>org.github.ontanikotani.mathfolding</id>
+    <name>Math folding</name>
+    <version>1.0</version>
+    <vendor url="https://github.com/Otanikotani/math-folding">
+        Otanikotani
+    </vendor>
+
+    <idea-version since-build="193.5662"/>
+
+    <description><![CDATA[
+        {{DESCRIPTION-PLACEHOLDER}}
+        ]]></description>
+
+    <change-notes><![CDATA[
+      {{CHANGELOG-PLACEHOLDER}}
+    ]]>
+    </change-notes>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <lang.foldingBuilder language="" implementationClass="org.github.otanikotani.mathfolding.MathFoldingBuilder"/>
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+    </actions>
+
+</idea-plugin>

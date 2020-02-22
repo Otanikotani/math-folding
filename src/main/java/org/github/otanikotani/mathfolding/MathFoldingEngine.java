@@ -1,4 +1,4 @@
-package org.limitium.mathfolding;
+package org.github.otanikotani.mathfolding;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
