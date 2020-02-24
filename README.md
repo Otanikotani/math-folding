@@ -1,4 +1,4 @@
-<img src="https://cloud.githubusercontent.com/src/main/resources/META-INF/pluginIcon.svg" width="48" height="4" alt="logo">
+<img src="https://raw.githubusercontent.com/Otanikotani/math-folding/master/src/main/resources/META-INF/pluginIcon.svg" width="48" height="4" alt="logo">
 
 [![Math Folding](https://img.shields.io/badge/JB%20Repository-Math%20Folding-brightgreen.svg)](https://plugins.jetbrains.com/plugin/9293-math-folding "JetBrains Repo: Math Folding Plugin")
 
