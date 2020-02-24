@@ -9,13 +9,8 @@
     <idea-version since-build="193.5662"/>
 
     <description><![CDATA[
-        {{DESCRIPTION-PLACEHOLDER-40-RANDOM-CHARACTERS}}
+        Fold Math.abs, Math.pow, Math.sqrt, Math.cbrt into more readable, mathematical symbols.
         ]]></description>
-
-    <change-notes><![CDATA[
-      {{CHANGELOG-PLACEHOLDER-40-RANDOM-CHARACTERS}}
-    ]]>
-    </change-notes>
 
     <extensions defaultExtensionNs="com.intellij">
         <lang.foldingBuilder language="JAVA" id="MathFoldingBuilder" implementationClass="org.github.otanikotani.mathfolding.MathFoldingBuilder"/>

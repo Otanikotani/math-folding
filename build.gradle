@@ -3,6 +3,7 @@ plugins {
     id 'java-library'
     id 'groovy'
     id 'org.jetbrains.intellij' version '0.4.16'
+    id 'org.kordamp.gradle.markdown' version '2.0.0'
 
     id 'com.adarshr.test-logger' version '1.7.0'
 }
@@ -32,11 +33,14 @@ intellij {
 }
 
 patchPluginXml {
-    changeNotes """                                              
-      {{CHANGELOG-PLACEHOLDER}}
-      """
+    dependsOn markdownToHtml
+
+    changeNotes = new File("build/gen-html/CHANGELOG.html").text
 }
 
+markdownToHtml {
+    sourceDir = new File(projectDir, "changelog")
+}
 
 testlogger {
     theme 'mocha'
