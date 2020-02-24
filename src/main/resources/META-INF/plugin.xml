@@ -9,16 +9,16 @@
     <idea-version since-build="193.5662"/>
 
     <description><![CDATA[
-        {{DESCRIPTION-PLACEHOLDER}}
+        {{DESCRIPTION-PLACEHOLDER-40-RANDOM-CHARACTERS}}
         ]]></description>
 
     <change-notes><![CDATA[
-      {{CHANGELOG-PLACEHOLDER}}
+      {{CHANGELOG-PLACEHOLDER-40-RANDOM-CHARACTERS}}
     ]]>
     </change-notes>
 
     <extensions defaultExtensionNs="com.intellij">
-        <lang.foldingBuilder language="" implementationClass="org.github.otanikotani.mathfolding.MathFoldingBuilder"/>
+        <lang.foldingBuilder language="JAVA" id="MathFoldingBuilder" implementationClass="org.github.otanikotani.mathfolding.MathFoldingBuilder"/>
         <!-- Add your extensions here -->
     </extensions>
 
