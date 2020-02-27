@@ -44,7 +44,7 @@ patchPluginXml {
 }
 
 markdownToHtml {
-    sourceDir = new File(projectDir, "docs")
+    sourceDir = new File("/docs")
 }
 
 testlogger {
