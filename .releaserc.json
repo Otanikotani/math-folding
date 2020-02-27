@@ -1,16 +1,16 @@
 {
     "branches": ["master"],
-    "tagFormat": "v${version}",
+    "tagFormat": "${version}",
     "plugins": [
         "@semantic-release/commit-analyzer",
         "@semantic-release/release-notes-generator",
-        "gradle-semantic-release-plugin",
         ["@semantic-release/changelog", {
             "changelogFile": "docs/CHANGELOG.md"
         }],
         ["@semantic-release/github", {
             "assets": ["docs/CHANGELOG.md"]
         }],
+        "gradle-semantic-release-plugin",
         ["@semantic-release/git", {
             "assets": ["docs/CHANGELOG.md", "gradle.properties"],
             "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
