@@ -12,7 +12,7 @@
             "assets": ["docs/CHANGELOG.md"]
         }],
         ["@semantic-release/exec", {
-            "successCmd": "sed -i \"s/version=[[:digit:]]\\+\\.[[:digit:]]\\+\\.[[:digit:]]\\+/version=${nextRelease.version/g\" gradle.properties"
+            "prepareCmd": "sed -i \"s/version=[[:digit:]]\\+\\.[[:digit:]]\\+\\.[[:digit:]]\\+/version=${nextRelease.version}/g\" gradle.properties"
         }],
         ["@semantic-release/git", {
             "assets": ["docs/CHANGELOG.md", "gradle.properties"],
