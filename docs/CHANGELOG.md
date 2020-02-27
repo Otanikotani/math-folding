@@ -1,3 +1,10 @@
+## [1.0.5](https://github.com/Otanikotani/math-folding/compare/1.0.4...1.0.5) (2020-02-27)
+
+
+### Bug Fixes
+
+* gradle version bump ([c723723](https://github.com/Otanikotani/math-folding/commit/c723723530df4328bdd99cde68b35b6c3d04ece3))
+
 ## [1.0.4](https://github.com/Otanikotani/math-folding/compare/v1.0.3...1.0.4) (2020-02-27)
 
 
