@@ -39,11 +39,16 @@ jobs:
                     extra_plugins: |
                         @semantic-release/release-notes-generator
                         @semantic-release/changelog
-                        @semantic-release/git
+                        @semantic-release/exec
                         @semantic-release/github
-                        gradle-semantic-release-plugin
+                        @semantic-release/git
                 env:
                     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+            -   name: Publish the plugin
+                if: steps.semantic.outputs.new_release_published == 'true'
+                run: ./gradlew publish
+                env:
                     USERNAME: ${{ github.actor }}
                     PASSWORD: ${{ secrets.GITHUB_TOKEN }}
                     ORG_GRADLE_PROJECT_intellijPublishToken: ${{ secrets.INTELLIJ_PUBLISH_TOKEN }}
