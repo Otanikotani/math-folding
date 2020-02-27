@@ -37,9 +37,9 @@ jobs:
                 id: semantic
                 with:
                     extra_plugins: |
-                        @semantic-release/github
-                        @semantic-release/changelog
                         @semantic-release/release-notes-generator
+                        @semantic-release/changelog
+                        @semantic-release/github
                 env:
                     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
