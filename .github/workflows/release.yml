@@ -45,6 +45,7 @@ jobs:
                     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
             -   name: Publish the plugin
+                if: steps.semantic.outputs.new_release_published == 'true'
                 run: ./gradlew publish
                 env:
                     USERNAME: ${{ github.actor }}
