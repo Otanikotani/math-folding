@@ -35,14 +35,16 @@ intellij {
 patchPluginXml {
     dependsOn markdownToHtml
 
-    String content = new File("build/gen-html/CHANGELOG.html").text
-    changeNotes = """ 
+    changeNotes = {
+        String content = new File("build/gen-html/CHANGELOG.html").text
+        return """ <![CDATA[ 
         $content
-    """
+    ]]"""
+    }
 }
 
 markdownToHtml {
-    sourceDir = new File(projectDir, "changelog")
+    sourceDir = new File(projectDir, "docs")
 }
 
 testlogger {

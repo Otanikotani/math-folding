@@ -1,32 +1,32 @@
 name: Check
 
 on:
-  push:
-    branches:
-      - 'master'
-      - 'feature/**'
-      - 'bugfix/**'
+    push:
+        branches:
+            - '^master'
+            - 'feature/**'
+            - 'bugfix/**'
 
 jobs:
-  check:
-    name: Check
-    runs-on: ubuntu-latest
-    steps:
-      - name: Check out code
-        uses: actions/checkout@v1
+    check:
+        name: Check
+        runs-on: ubuntu-latest
+        steps:
+            -   name: Check out code
+                uses: actions/checkout@v1
 
-      - name: Set up JDK 1.8
-        uses: actions/setup-java@v1
-        with:
-          java-version: 8
+            -   name: Set up JDK 1.8
+                uses: actions/setup-java@v1
+                with:
+                    java-version: 8
 
-      - name: Run Unit tests
-        run: |
-          ./gradlew test jacocoTestReport
+            -   name: Run Unit tests
+                run: |
+                    ./gradlew test jacocoTestReport
 
-      - uses: codecov/codecov-action@v1
-        name: Upload coverage report to codecov
-        with:
-          token: ${{ secrets.CODECOV_TOKEN }}
-          file: ./build/reports/jacoco/report.xml
-          fail_ci_if_error: true
+            -   uses: codecov/codecov-action@v1
+                name: Upload coverage report to codecov
+                with:
+                    token: ${{ secrets.CODECOV_TOKEN }}
+                    file: ./build/reports/jacoco/report.xml
+                    fail_ci_if_error: true
