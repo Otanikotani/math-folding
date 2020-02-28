@@ -38,7 +38,7 @@ patchPluginXml {
         String content = new File("build/gen-html/CHANGELOG.html").text
         return """ <![CDATA[ 
         $content
-    ]]"""
+    ]]>"""
     }
 }
 
