@@ -35,10 +35,7 @@ patchPluginXml {
     dependsOn markdownToHtml
 
     changeNotes = {
-        String content = new File("build/gen-html/CHANGELOG.html").text
-        return """ <![CDATA[ 
-        $content
-    ]]>"""
+        return new File("build/gen-html/CHANGELOG.html").text
     }
 }
 
