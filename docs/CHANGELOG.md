@@ -1,3 +1,10 @@
+## [1.0.6](https://github.com/Otanikotani/math-folding/compare/1.0.5...1.0.6) (2020-02-28)
+
+
+### Bug Fixes
+
+* change notes fix ([2133412](https://github.com/Otanikotani/math-folding/commit/2133412126a32712bc292dba757afb0cecead163))
+
 ## [1.0.5](https://github.com/Otanikotani/math-folding/compare/1.0.4...1.0.5) (2020-02-27)
 
 
